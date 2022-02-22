@@ -1,0 +1,27 @@
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  display: flex;
+}
+
+#container {
+display: grid; 
+grid-template-columns: repeat(16, 1fr);
+grid-template-rows: repeat(16, 1fr);
+width: 300px;
+height: 300px;
+border: 2px solid black;
+}
+
+#button{
+display: flex;
+margin-bottom: 20px;
+}
+
+.box {
+    border: 1px solid black;
+}
