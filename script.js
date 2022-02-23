@@ -21,6 +21,18 @@ boxes.forEach((box) => {
 
 paint()
 
+function paintCellPhone(){
+  let boxes = document.querySelectorAll('.box');
+  boxes.forEach((box) => {
+      box.addEventListener('touchmove', () => {
+        box.style.backgroundColor = 'black';
+      });
+  });
+  }
+
+paintCellPhone()
+
+
 
 const button = document.getElementById('button');
 
@@ -40,4 +52,5 @@ button.addEventListener('click', () => {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     paint()
+    paintCellPhone()
 });
