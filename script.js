@@ -30,6 +30,9 @@ button.addEventListener('click', () => {
     box.style.backgroundColor = 'white';
     });
     let size = prompt("Please enter the desired number of squares per side for the new grid");
+    while (size > 100 || size < 4){
+    size = prompt("Please enter a number between 4 and 100");
+    }
     while (container.firstChild) {
     container.firstChild.remove()
     }
