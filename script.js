@@ -9,10 +9,32 @@ for (i = 0; i < size * size; i++) {
 
 makeGrid(16)
 
-const boxes = document.querySelectorAll('.box');
 
+function paint(){
+let boxes = document.querySelectorAll('.box');
 boxes.forEach((box) => {
     box.addEventListener('mouseover', () => {
       box.style.backgroundColor = 'black';
     });
+});
+}
+
+paint()
+
+
+const button = document.getElementById('button');
+
+button.addEventListener('click', () => {
+  let boxes = document.querySelectorAll('.box');
+  boxes.forEach((box) => {
+    box.style.backgroundColor = 'white';
+    });
+    let size = prompt("Please enter the desired number of squares per side for the new grid");
+    while (container.firstChild) {
+    container.firstChild.remove()
+    }
+    makeGrid(size);
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    paint()
 });
