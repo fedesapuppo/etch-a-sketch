@@ -9,3 +9,10 @@ for (i = 0; i < size * size; i++) {
 
 makeGrid(16)
 
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach((box) => {
+    box.addEventListener('mouseover', () => {
+      box.style.backgroundColor = 'black';
+    });
+});
